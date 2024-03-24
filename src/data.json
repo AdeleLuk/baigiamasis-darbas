@@ -1,0 +1,28 @@
+{
+    "users": [
+      {
+        "id": "0",
+        "userName": "Vartotojas1",
+        "password": "123"
+      },
+      {
+        "id": "1",
+        "userName": "Vartotojas2",
+        "password": "abc"
+      }
+    ],
+    "questions": [
+      {
+        "id": "0",
+        "userId": "0",
+        "questionTitle": "How to make pasta?",
+        "questionBody": "I am really into Italian food, how do I make good pasta?"
+      },
+      {
+        "id": "1",
+        "userId": "1",
+        "questionTitle": "What is crypto",
+        "questionBody": "Can anyone explain how does crypto currency work and what is blockchain?"
+      }
+    ]
+  }
