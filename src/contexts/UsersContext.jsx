@@ -1,13 +1,23 @@
 import { createContext, useReducer, useState, useEffect } from "react";
 
 export const UserActionTypes = {
-    FetchAll: 'fetches all users'
+    FetchAll: 'fetches all users',
+    register: 'adds new user to all users data '
 }
 
 const reducer = (state, action) => {
     switch(action.type){
         case UserActionTypes.FetchAll:
             return action.data;
+        case UserActionTypes.register:
+            fetch(`http://localhost:8085/users`, {
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(action.data)
+            });
+            return[...state, action.data]
         default:
             return state;
     }

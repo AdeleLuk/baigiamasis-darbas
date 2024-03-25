@@ -1,4 +1,6 @@
-import {Link, NavLink} from 'react-router-dom';
+import { useContext } from 'react';
+import UsersContext from '../../contexts/UsersContext';
+import {Link, NavLink, useNavigate} from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -35,11 +37,29 @@ const StyledHeader = styled.header`
     > div:nth-child(3){
         margin-right: 20px;
     }
-    
- 
+    .loggedIn{
+        > button{
+            background-color: white;
+            border-radius: 10px;
+            border: none;
+            color: #116DFF;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        > p{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+    } 
 `;
 
 const Header = () => {
+
+    const { loggedInUser, setLoggedInUser } = useContext(UsersContext);
+    const navigate = useNavigate();
     return ( 
         <StyledHeader>
             <div>
@@ -57,18 +77,30 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-            <div>
-              <nav>
-                <ul>
-                    <li>
+            {
+                loggedInUser ?
+                <div className='loggedIn'>
+                    <p>{loggedInUser.userName}</p>
+                    <button
+                      onClick={() => {
+                        setLoggedInUser(false);
+                        navigate('/');
+                      }}
+                    >Log out</button>
+                </div> :
+                <div>
+                  <nav>
+                     <ul>
+                       <li>
                         <NavLink to='users/login'>Log In</NavLink>
-                    </li>
-                    <li>
+                       </li>
+                       <li>
                         <NavLink to='users/register'>Register</NavLink>
-                    </li>
-                </ul>
-              </nav>
-            </div>
+                       </li>
+                    </ul>
+                  </nav>
+               </div>
+            }
         </StyledHeader>
      );
 }
