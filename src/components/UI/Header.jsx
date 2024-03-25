@@ -21,7 +21,8 @@ const StyledHeader = styled.header`
                 a {
                     text-decoration: none;
                     color: white;
-                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bold;
                 }
              }
          }
@@ -51,7 +52,7 @@ const Header = () => {
                         <NavLink to='/'>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to='forum/questions'>Questions</NavLink>
+                        <NavLink to='forum/questions'>Forum</NavLink>
                     </li>
                 </ul>
               </nav>
