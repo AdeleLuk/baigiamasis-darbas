@@ -31,7 +31,7 @@ const UsersProvider = ({ children }) => {
 
     return(
         <UsersContext.Provider
-          values={{
+          value={{
             users,
             setUsers,
             loggedInUser,
