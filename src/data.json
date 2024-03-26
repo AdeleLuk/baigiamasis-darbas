@@ -9,20 +9,31 @@
       "id": "1",
       "userName": "Vartotojas2",
       "password": "abc"
+    },
+    {
+      "id": "f4257ec9-8c84-4f5c-a12f-eec2fca87ba7",
+      "userName": "testt",
+      "password": "testT123456*"
     }
   ],
   "questions": [
     {
       "id": "0",
       "userId": "0",
-      "questionTitle": "How to make pasta?",
-      "questionBody": "I am really into Italian food, how do I make good pasta?"
+      "question": {
+        "title": "How to make pasta?",
+        "body": "I am really into Italian food, how do I make good pasta?"
+      },
+      "timestamp": "2024-03-24T15:18:56.084Z"
     },
     {
       "id": "1",
       "userId": "1",
-      "questionTitle": "What is crypto???Pls explain",
-      "questionBody": "Can anyone explain how does crypto currency work and what is blockchain?"
+      "question": {
+        "title": "What is crypto???Pls explain",
+        "body": "Can anyone explain how does crypto currency work and what is blockchain?"
+      },
+      "timestamp": "2024-03-24T15:18:56.084Z"
     }
   ]
 }
