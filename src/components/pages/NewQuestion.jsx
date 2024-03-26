@@ -8,6 +8,54 @@ import QuestionsContext from "../../contexts/QuestionsContext";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
+const StyledDiv = styled.div `
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 1px solid black;
+   margin: 50px;
+   background-color: #cfccccaa;
+   border-radius: 20px;
+   > h1 {
+   }
+   > form{
+
+    .styledInputs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input {
+        width: 300px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: 1px solid grey;
+        padding: 10px 20px;
+    }
+    textarea {
+        width: 500px;
+        margin-bottom: 20px;
+        height: 200px;
+        border-radius: 20px;
+        padding: 5px 15px;
+    }
+    .post{
+        padding: 7px 15px;
+        border-radius: 15px;
+        background-color: #116DFF;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        width: 150px;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+   }
+`;
+
 
 const NewQuestion = () => {
 
@@ -47,10 +95,10 @@ const NewQuestion = () => {
        })
     });
     return ( 
-        <div>
-            <h1>Post New Question...</h1>
+        <StyledDiv>
+            <h1>Post Your New Question...</h1>
             <form onSubmit={formik.handleSubmit}>
-                <div>
+                <div className="styledInputs">
                     <input 
                       type="text"
                       name="questionTitle"
@@ -65,7 +113,7 @@ const NewQuestion = () => {
                         <p>{formik.errors.questionTitle}</p>
                     }
                 </div>
-                <div>
+                <div className="styledInputs">
                     <textarea 
                       name="questionBody"
                       id="questionBody"
@@ -79,9 +127,11 @@ const NewQuestion = () => {
                         <p>{formik.errors.questionBody}</p>
                     }
                 </div>
-                <input type="submit" value="Post" />
+                <div className="container">
+                   <input className="post" type="submit" value="Post" />
+                </div>
             </form>
-        </div>
+        </StyledDiv>
      );
 }
  

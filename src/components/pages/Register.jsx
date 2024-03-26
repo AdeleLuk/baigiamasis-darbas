@@ -7,6 +7,10 @@ import { v4 as uuid } from 'uuid';
 import { useContext, useState } from 'react';
 import UsersContext from '../../contexts/UsersContext';
 
+const StyledSection = styled.section`
+    
+`;
+
 const Register = () => {
 
     const navigate = useNavigate();
@@ -60,7 +64,7 @@ const Register = () => {
     });
 
     return ( 
-        <section>
+        <StyledSection>
             <h1>Register</h1>
             <form onSubmit={formik.handleSubmit}>
                 <div>
@@ -116,7 +120,7 @@ const Register = () => {
             {
                 nameTaken && <p>This username is taken</p>
             }
-        </section>
+        </StyledSection>
      );
 }
  

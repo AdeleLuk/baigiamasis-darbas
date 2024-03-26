@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import UsersContext from '../../contexts/UsersContext';
-import {Link, NavLink, useNavigate} from 'react-router-dom';
+import { NavLink, useNavigate} from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`

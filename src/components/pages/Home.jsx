@@ -25,7 +25,11 @@ margin-top: 50px;
         >button{
             background-color: #116DFF;
             color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
             padding: 10px;
+            border-radius: 20px;
+            padding: 10px 20px;
         }
     }
    }
