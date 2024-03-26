@@ -23,7 +23,7 @@ const App = () => {
             <Route path='questions' element={<Forum />}/>
             <Route path='newQuestion' element={
             loggedInUser ? <NewQuestion /> : <Navigate to='/users/login' />}/>
-          <Route path=':belekas' element={<SingleQuestion />} />
+          <Route path=':id' element={<SingleQuestion />} />
           </Route>
           <Route path='/users'>
               <Route path="login" element={<Login />}/>
