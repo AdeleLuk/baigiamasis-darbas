@@ -3,13 +3,23 @@ import { createContext, useEffect, useReducer } from 'react';
 const QuestionsContext = createContext();
 
 export const ActionTypes = {
-    FetchAll: 'fetch all questions'
+    FetchAll: 'fetch all questions',
+    newQuestion: 'add to new question'
 }
 
 const reducer = (state, action) => {
     switch(action.type){
         case ActionTypes.FetchAll:
             return action.data;
+        case ActionTypes.newQuestion:
+            fetch(`http://localhost:8085/questions`, {
+              method: "POST",
+              headers: {
+                "Content-Type":"application/json"
+              },
+              body: JSON.stringify(action.data)
+            });
+            return[...state, action.data];
         default:
             return state;
 

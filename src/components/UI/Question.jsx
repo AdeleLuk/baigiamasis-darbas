@@ -20,8 +20,8 @@ const Question = ({ data }) => {
     return ( 
         <StyledDiv>
             <div>
-                <h1>{data.question.title}</h1>
-                <p>{data.question.body}</p>
+                <h1>{data.questionTitle}</h1>
+                <p>{data.questionBody}</p>
                 <p>{data.timestamp}</p>
             </div>
         </StyledDiv>
