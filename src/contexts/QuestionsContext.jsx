@@ -4,7 +4,8 @@ const QuestionsContext = createContext();
 
 export const ActionTypes = {
     FetchAll: 'fetch all questions',
-    newQuestion: 'add to new question'
+    newQuestion: 'add to new question',
+    delete: 'delete question card'
 }
 
 const reducer = (state, action) => {
@@ -20,6 +21,11 @@ const reducer = (state, action) => {
               body: JSON.stringify(action.data)
             });
             return[...state, action.data];
+          case ActionTypes.delete:
+            fetch(`http://localhost:8085/questions/${action.id}`,{
+              method: "DELETE"
+            });
+            return state.filter(question => question.id !== action.id);
         default:
             return state;
 

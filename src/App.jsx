@@ -8,6 +8,7 @@ import Home from './components/pages/Home';
 import Forum from './components/pages/Forum';
 import Header from './components/UI/Header';
 import NewQuestion from './components/pages/NewQuestion';
+import SingleQuestion from './components/pages/SingleQuestion';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
             <Route path='questions' element={<Forum />}/>
             <Route path='newQuestion' element={
             loggedInUser ? <NewQuestion /> : <Navigate to='/users/login' />}/>
+          <Route path=':belekas' element={<SingleQuestion />} />
           </Route>
           <Route path='/users'>
               <Route path="login" element={<Login />}/>
