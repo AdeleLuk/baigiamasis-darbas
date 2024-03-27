@@ -15,12 +15,15 @@ const StyledDiv = styled.div `
    align-items: center;
    border: 1px solid black;
    margin: 50px;
-   background-color: #cfccccaa;
    border-radius: 20px;
+   background-color: #9093ee82;
    > h1 {
+    color:white;
+    background-color: #9093eed8;
+    border-radius: 20px;
+    padding: 5px 20px;
    }
    > form{
-
     .styledInputs{
         display: flex;
         flex-direction: column;

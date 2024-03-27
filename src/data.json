@@ -34,13 +34,43 @@
       "userId": "1",
       "questionTitle": "What is crypto???Pls explain",
       "questionBody": "Can anyone explain how does crypto currency work and what is blockchain?",
-      "timestamp": "2024-03-24T15:18:56.084Z"
+      "timestamp": "2024-03-24T15:18:56.084Z",
+      "comments":[
+        {
+          "id":"0",
+          "commentAuthorId":"40c9a2fb-b26d-487b-8063-47e71e27ce18",
+          "text":"it's a scam"
+        },
+        {
+          "id":"1",
+          "commentAuthorId":"f4257ec9-8c84-4f5c-a12f-eec2fca87ba7",
+          "text":"ask chat gpt"
+        }
+      ]
     },
     {
       "id": "8eaaa15e-10b9-414a-a1d6-748a4ab6491d",
       "userId": "0",
       "questionTitle": "Testinis klausimukas",
       "questionBody": "Sveiki, testuoju funkcionaluma, ar viskas veikia?"
+    },
+    {
+      "id": "f0b745d8-24d2-416c-a676-5d2987bd1c17",
+      "userId": "0",
+      "questionTitle": "Naujas klausimas",
+      "questionBody": "Naujas klausimas test test test",
+      "comments":[
+        {
+          "id":"0",
+          "commentAuthorId":"1",
+          "text":"mane irgi domina"
+        },
+        {
+          "id":"1",
+          "commentAuthorId":"0",
+          "text":"jau atsakytas sitas klausimas"
+        }
+      ]
     }
   ]
 }

@@ -24,8 +24,6 @@ const Register = () => {
             passwordRepeat: ""
         },
         onSubmit: (values) => {
-            console.log(values);
-            console.log(users);
 
           if(users.find(user => user.userName === values.userName)){
             setNameTaken(true);

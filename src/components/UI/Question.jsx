@@ -17,8 +17,7 @@ const StyledDiv = styled.div`
         flex-direction: column;
         align-items: center;
 
-        border: 1px solid black;
-        border-radius: 10px;
+        border-radius: 25px;
         background-color: #9093ee82;
 
         > a{
@@ -41,7 +40,7 @@ const StyledDiv = styled.div`
         }
         .delete{
             display: flex;
-            width: 500px;
+            width: 90%;
             justify-content: flex-end;
             > button {
                 background-color: transparent;
