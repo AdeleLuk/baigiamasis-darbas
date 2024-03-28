@@ -2,11 +2,11 @@
 
 body{
     margin:0;
-    background-image: url("https://www.pngitem.com/pimgs/m/508-5081850_emoji-background-pink-heart-hd-png-download.png");
+    background-image: url("../media/bg-overlay.png"), url("../media/Monosnap\ 508-5081850_emoji-background-pink-heart-hd-png-download.png\ \(860×900\)\ 2024-03-28\ 22-25-19.png");
     background-position: center;
-    background-size: 30%;
+    background-size: 20%;
 } 
 
 main{
-    height: 300vh;
+    height: 200vh;
 }

@@ -19,6 +19,8 @@ const StyledDiv = styled.div`
 
         border-radius: 25px;
         background-color: #9093ee82;
+        box-shadow: 15px 15px 30px #191919,
+                   -15px -15px 30px #3c3c3c;
 
         > a{
 

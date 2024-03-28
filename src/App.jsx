@@ -10,11 +10,11 @@ import Header from "./components/UI/Header";
 import NewQuestion from "./components/pages/NewQuestion";
 import SingleQuestion from "./components/pages/SingleQuestion";
 import Footer from "./components/UI/Footer";
-// import { emojiCursor } from "cursor-effects";
+import { emojiCursor } from "cursor-effects";
 
 const App = () => {
   const { loggedInUser } = useContext(UsersContext);
-  // new emojiCursor({ emoji: ["🔥", "🐬", "🦆"] });
+  new emojiCursor({ emoji: ["🔥", "🐬", "🦆"] });
   return (
     <>
       <Header />
