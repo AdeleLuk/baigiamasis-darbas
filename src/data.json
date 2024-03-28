@@ -19,6 +19,16 @@
       "id": "40c9a2fb-b26d-487b-8063-47e71e27ce18",
       "userName": "naujasvisiskai",
       "password": "passwordD123*"
+    },
+    {
+      "id": "0516511c-ba60-42bf-9d5c-563108bc4110",
+      "userName": "Adele3000",
+      "password": "passwordD123*"
+    },
+    {
+      "id": "3ec79f0a-75e9-4c58-a842-4655b11ce1ca",
+      "userName": "Adele3001",
+      "password": "passwordD123*"
     }
   ],
   "questions": [
@@ -81,8 +91,15 @@
           "id": "1",
           "authorId": "1",
           "text": "it's a scam alsooo"
-          }
+        }
       ]
+    },
+    {
+      "id": "ea873749-0428-4128-9f88-1cb1ad98aad5",
+      "userId": "0516511c-ba60-42bf-9d5c-563108bc4110",
+      "questionTitle": "Sveiki mano pirmas klausimas",
+      "questionBody": "Sveiki mano pirmas klausimas kaip sekasi?",
+      "timestamp": "2024-03-28"
     }
   ]
 }

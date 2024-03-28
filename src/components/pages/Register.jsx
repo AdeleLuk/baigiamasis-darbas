@@ -8,7 +8,57 @@ import { useContext, useState } from 'react';
 import UsersContext from '../../contexts/UsersContext';
 
 const StyledSection = styled.section`
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  border-radius: 20px;
+  background-color: #9093ee82;
+  > form{
+    > div{
+      > p{
+        background-color:#5d96f1;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
+    }
+  }
+  > h1 {
+    color: white;
+    background-color: #9348eed7;
+    border-radius: 20px;
+    padding: 5px 20px;
+  }
+    input {
+      width: 300px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 1px solid grey;
+      padding: 10px 20px;
+    }
+    .register {
+      padding: 10px 15px;
+      border-radius: 15px;
+      background-color: #116dff;
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      width: 250px;
+      border: none;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+    > p{
+        background-color:#5d96f1;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
 `;
 
 const Register = () => {
@@ -43,20 +93,20 @@ const Register = () => {
         },
         validationSchema: Yup.object({
             userName: Yup.string()
-              .min(3, 'Must be at least 8 symbols')
-              .max(20, 'User name is too long')
-              .required('This field is required')
+              .min(3, 'Must be at least 8 symbols!')
+              .max(20, 'User name is too long!')
+              .required('This field is required!')
               .trim(),
             password: Yup.string()
-              .required('This field is required')
+              .required('This field is required!')
               .matches(
                 /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,25}$/,
               'Password must be at least: one lower case letter, one upper case letter, one number, one special character, lenght must be between 8 and 25'
             )
              .trim(),
             passwordRepeat: Yup.string()
-              .oneOf([Yup.ref('password')], 'Passwords does not match')
-              .required('This field is required')
+              .oneOf([Yup.ref('password')], 'Passwords does not match!')
+              .required('This field is required!')
               .trim()
         })
     });
@@ -66,7 +116,6 @@ const Register = () => {
             <h1>Register</h1>
             <form onSubmit={formik.handleSubmit}>
                 <div>
-                    <label htmlFor="userName">Username</label>
                     <input
                       type="text"
                       id="userName"
@@ -82,7 +131,6 @@ const Register = () => {
                     }
                 </div>
                 <div>
-                    <label htmlFor="password">Password</label>
                     <input
                       type="password"
                       id="password"
@@ -98,7 +146,6 @@ const Register = () => {
                     }
                 </div>
                 <div>
-                    <label htmlFor="passwordRepeat">Repeat your password</label>
                     <input
                       type="password"
                       id="passwordRepeat"
@@ -113,7 +160,9 @@ const Register = () => {
                         <p>{formik.errors.passwordRepeat}</p>
                     }
                 </div>
-                <input type="submit" value="Register" />
+                <div className='container'>
+                <input className='register' type="submit" value="Register" />
+                </div>
             </form>
             {
                 nameTaken && <p>This username is taken</p>

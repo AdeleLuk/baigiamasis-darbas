@@ -7,9 +7,19 @@ import UsersContext from "../../contexts/UsersContext";
 // import { emojiCursor } from "cursor-effects";
 
 const StyledSection = styled.section`
+
+ .container {
+  display: flex;
+  align-items: center;
   > h1 {
+    color: white;
+    background-color: #9348eed7;
+    border-radius: 20px;
+    padding: 5px 20px;
     text-align: center;
-  }
+    width: fit-content;
+   }
+ }
 
   > div {
     display: flex;
@@ -38,8 +48,9 @@ const Forum = () => {
 
   return (
     <StyledSection>
-      <h1>Forum</h1>
-
+      <div className="container">
+       <h1>Welcome to Community Forum</h1>
+      </div>
       <div>
         <div className="newQuestion">
           {loggedInUser ? (
