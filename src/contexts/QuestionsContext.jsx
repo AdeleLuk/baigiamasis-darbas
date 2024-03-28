@@ -48,7 +48,7 @@ const reducer = (state, action) => {
         body: JSON.stringify(changedCard),
       });
       return state.map((el) => {
-        if (el.id === action.card) {
+        if (el.id === action.cardId) {
           return changedCard;
         } else {
           return el;

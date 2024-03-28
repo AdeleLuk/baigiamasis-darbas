@@ -59,7 +59,12 @@
       "timestamp": "2024-03-27",
       "comments": [
         {
-          "id": "0",
+          "id": "1",
+          "authorId": "1",
+          "text": "kitas komentaras"
+        },
+        {
+          "id": "1",
           "authorId": "0",
           "text": "it's a scam alsooo"
         }
@@ -73,20 +78,10 @@
       "timestamp": "2024-03-27",
       "comments": [
         {
-          "id": "0",
-          "authorId": "0",
+          "id": "1",
+          "authorId": "1",
           "text": "it's a scam alsooo"
-        },
-        {
-          "id": "0",
-          "authorId": "0",
-          "text": "it's a scam alsooo"
-        },
-        {
-          "id": "0",
-          "authorId": "0",
-          "text": "it's a scam alsooo"
-        }
+          }
       ]
     }
   ]

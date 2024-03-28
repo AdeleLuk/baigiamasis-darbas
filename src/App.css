@@ -3,6 +3,12 @@
 body{
     margin:0;
     background-image: url("https://www.pngitem.com/pimgs/m/508-5081850_emoji-background-pink-heart-hd-png-download.png");
-    /* background-position: center;
-    background-size: 20%; */
+    background-position: center;
+    background-size: 30%;
 } 
+
+main{
+    min-height: calc(100vh - 80px - 150px);
+  
+}
+  
