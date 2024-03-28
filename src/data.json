@@ -27,48 +27,65 @@
       "userId": "0",
       "questionTitle": "Does anyone know how to make pasta?",
       "questionBody": "I am really into Italian food, how do I make good pasta?",
-      "timestamp": "2024-03-24T15:18:56.084Z"
+      "timestamp": "2024-01-15"
     },
     {
       "id": "1",
       "userId": "1",
       "questionTitle": "What is crypto???Pls explain",
       "questionBody": "Can anyone explain how does crypto currency work and what is blockchain?",
-      "timestamp": "2024-03-24T15:18:56.084Z",
-      "comments":[
+      "timestamp": "2023-03-27",
+      "comments": [
         {
-          "id":"0",
-          "commentAuthorId":"40c9a2fb-b26d-487b-8063-47e71e27ce18",
-          "text":"it's a scam"
-        },
-        {
-          "id":"1",
-          "commentAuthorId":"f4257ec9-8c84-4f5c-a12f-eec2fca87ba7",
-          "text":"ask chat gpt"
+          "id": "0",
+          "authorId": "0",
+          "text": "it's a scam"
         }
       ]
     },
     {
-      "id": "8eaaa15e-10b9-414a-a1d6-748a4ab6491d",
+      "id": "254ed14e-2b4a-4014-b459-47128c101cf2",
       "userId": "0",
-      "questionTitle": "Testinis klausimukas",
-      "questionBody": "Sveiki, testuoju funkcionaluma, ar viskas veikia?"
+      "questionTitle": "Testinis klausimukas nr 2",
+      "questionBody": "Testinis klausimukas nr 2",
+      "timestamp": "2024-03-27",
+      "comments": []
     },
     {
-      "id": "f0b745d8-24d2-416c-a676-5d2987bd1c17",
+      "id": "c1c3753a-e56e-43d3-bcb6-fd138a1ea387",
       "userId": "0",
-      "questionTitle": "Naujas klausimas",
-      "questionBody": "Naujas klausimas test test test",
-      "comments":[
+      "questionTitle": "Testinis klausimukas nr 2",
+      "questionBody": "Testinis klausimukas nr 2",
+      "timestamp": "2024-03-27",
+      "comments": [
         {
-          "id":"0",
-          "commentAuthorId":"1",
-          "text":"mane irgi domina"
+          "id": "0",
+          "authorId": "0",
+          "text": "it's a scam alsooo"
+        }
+      ]
+    },
+    {
+      "id": "9d4a9b2d-1547-49c3-92a0-a4742de390f3",
+      "userId": "0",
+      "questionTitle": "Domina dalykai visi",
+      "questionBody": "Domina dalykai visi",
+      "timestamp": "2024-03-27",
+      "comments": [
+        {
+          "id": "0",
+          "authorId": "0",
+          "text": "it's a scam alsooo"
         },
         {
-          "id":"1",
-          "commentAuthorId":"0",
-          "text":"jau atsakytas sitas klausimas"
+          "id": "0",
+          "authorId": "0",
+          "text": "it's a scam alsooo"
+        },
+        {
+          "id": "0",
+          "authorId": "0",
+          "text": "it's a scam alsooo"
         }
       ]
     }
