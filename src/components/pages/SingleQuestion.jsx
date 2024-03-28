@@ -59,8 +59,38 @@ const StyledDiv = styled.div`
     width: 100%;
     border-radius: 0px;
   }
-  .reply{
-
+  .formContainer{
+    border-radius: 0px;
+    width: 100%;
+    > form{
+      margin-top: 20px;
+      textarea{
+        width: 600px;
+        height: 200px;
+      }
+      .submitReply{
+        background-color: #126CFF;
+        color: white;
+        height: 30px;
+        border-radius: 20px;
+        padding: 5px 15px;
+      }
+      > div{
+        > p{
+        background-color:#5d96f1;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+       }
+     }
+    }
+  }
+  .form{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 5px;
   }
 `;
 
@@ -88,7 +118,6 @@ const SingleQuestion = () => {
         id: uuid(),
         authorId: loggedInUser.id,
       };
-      console.log(newComment);
       setQuestions({
         type: ActionTypes.addComment,
         comment: newComment,
@@ -132,8 +161,9 @@ const SingleQuestion = () => {
           </div>
           {
             loggedInUser &&
+            <div className="formContainer">
             <form onSubmit={formik.handleSubmit}>
-            <div>
+            <div className="form">
               <textarea
                 name="text"
                 id="text"
@@ -145,9 +175,10 @@ const SingleQuestion = () => {
                  {formik.touched.text && formik.errors.text && 
                  <p>{formik.errors.text}</p>
                  }
+                  <input className="submitReply" type="submit" value="Reply" />
              </div>
-             <input className="reply"type="submit" value="Reply" />
           </form>
+          </div>
           }
         </>
       }

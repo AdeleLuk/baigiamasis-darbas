@@ -50,16 +50,23 @@
           "id": "0",
           "authorId": "0",
           "text": "it's a scam"
+        },
+        {
+          "text": "I dont think soooo",
+          "id": "8a33cc7b-d6f7-4fa8-9803-d90389648d85",
+          "authorId": "0"
+        },
+        {
+          "text": "Tada pradedu rasyti ir viskas ok",
+          "id": "bb3588f1-c57c-4200-9174-c94a757cb385",
+          "authorId": "0"
+        },
+        {
+          "text": "testassssss",
+          "id": "ac4a5f14-f1e8-49aa-b371-bc687943148b",
+          "authorId": "0"
         }
       ]
-    },
-    {
-      "id": "254ed14e-2b4a-4014-b459-47128c101cf2",
-      "userId": "0",
-      "questionTitle": "Testinis klausimukas nr 2",
-      "questionBody": "Testinis klausimukas nr 2",
-      "timestamp": "2024-03-27",
-      "comments": []
     },
     {
       "id": "c1c3753a-e56e-43d3-bcb6-fd138a1ea387",

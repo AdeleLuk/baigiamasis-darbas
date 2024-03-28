@@ -53,14 +53,12 @@ const reducer = (state, action) => {
 
     case ActionTypes.deleteComment:
       const cardToChange = state.find(el => el.id === action.cardId);
-      console.log(cardToChange);
       const changedCard = {
         ...cardToChange,
         comments: cardToChange.comments.filter(
           (comment) => comment.id !== action.commentId
         ),
       };
-      console.log(changedCard);
       fetch(`http://localhost:8085/questions/${action.cardId}`, {
         method: "PUT",
         headers: {
