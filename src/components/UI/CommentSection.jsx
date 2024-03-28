@@ -6,6 +6,35 @@ import QuestionsContext from "../../contexts/QuestionsContext";
 
 const StyledDiv = styled.div`
   background-color: white;
+  border: 1px solid black;
+  width: 90%;
+
+  .author{
+    color: grey;
+    padding-left: 30px;
+  }
+  .comment{
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+  .container{
+    display: flex;
+    justify-content: flex-end;
+    > button{
+      margin-right: 10px;
+      margin-bottom: 5px;
+      border: none;
+      background-color: #116DFF;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      > i{
+        padding-right: 5px;
+      }
+    }
+  }
 `;
 
 const CommentSection = ({ comment, cardId }) => {
@@ -15,10 +44,11 @@ const CommentSection = ({ comment, cardId }) => {
 
   return (
     <StyledDiv>
-      <p>{comment.text}</p>
-      <p>From {author.userName}</p>
+      <p className="comment">{comment.text}</p>
+      <p className="author">From {author.userName}</p>
       {loggedInUser.id === comment.authorId && (
-        <button
+        <div className="container">
+          <button
           onClick={() =>
             setQuestions({
               type: ActionTypes.deleteComment,
@@ -26,9 +56,10 @@ const CommentSection = ({ comment, cardId }) => {
               cardId: cardId,
             })
           }
-        >
+        ><i class="bi bi-trash"></i>
           Delete comment
         </button>
+        </div>
       )}
     </StyledDiv>
   );

@@ -53,9 +53,12 @@ const StyledDiv = styled.div`
       }
     }
   }
-  .comments {
+  .forComment {
     margin-top: 30px;
     gap: 20px;
+    width: 100%;
+    border-radius: 0px;
+    height: 500px;
   }
 `;
 
@@ -95,7 +98,8 @@ const SingleQuestion = () => {
           </div>
         )}
       </div>
-      <div>
+      <div className="forComment">
+      <h1>Replies</h1>
         {card.comments?.map((comment) => (
           <CommentSection key={comment.id} comment={comment} cardId={card.id} />
         ))}

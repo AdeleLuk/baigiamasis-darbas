@@ -55,6 +55,15 @@ const StyledDiv = styled.div`
       display: flex;
       justify-content: center;
     }
+    > div{
+      > p{
+        background-color:#5d96f1;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
+    }
   }
 `;
 
@@ -87,14 +96,14 @@ const NewQuestion = () => {
     },
     validationSchema: Yup.object({
       questionTitle: Yup.string()
-        .min(10, "Title must consist of at least 5 symbols")
-        .max(100, "Title is too long")
-        .required("Please enter question title")
+        .min(10, "Title must consist of at least 5 symbols!")
+        .max(100, "Title is too long!")
+        .required("Please enter question title!")
         .trim(),
       questionBody: Yup.string()
-        .min(10, "Question must consist of at least 10 symbols")
-        .max(1000, "Reached character limit")
-        .required("Please type in your question")
+        .min(10, "Question must consist of at least 10 symbols!")
+        .max(1000, "Reached character limit!")
+        .required("Please type in your question!")
         .trim(),
     }),
   });

@@ -6,37 +6,57 @@ import { useFormik } from 'formik';
 import { useNavigate } from "react-router-dom";
 
 const StyledSection = styled.section`
-> h3{
-    text-align: center;
-    color: grey;
-}
-
-> form{
-    text-align: center;
-    > div {
-        > input{
-            width: 200px;
-            height: 25px;
-            margin-bottom: 10px;
-        }
-    }
-    .submit{
-        width: 210px;
-        height: 25px;
-        background-color: #116DFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  border-radius: 20px;
+  background-color: #9093ee82;
+  > form{
+    > div{
+      > p{
+        background-color:#5d96f1;
+        border-radius: 20px;
+        text-align: center;
         color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        border-radius: 10px;
+        padding: 10px;
+      }
     }
-}
-> p{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 14px;
-   }
+  }
+  > h1 {
+    color: white;
+    background-color: #9348eed7;
+    border-radius: 20px;
+    padding: 5px 20px;
+  }
+    input {
+      width: 300px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 1px solid grey;
+      padding: 10px 20px;
+    }
+    .login {
+      padding: 10px 15px;
+      border-radius: 15px;
+      background-color: #116dff;
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      width: 250px;
+      border: none;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+    > p{
+        background-color:#5d96f1;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
 `;
 
 const Login = () => {
@@ -64,17 +84,17 @@ const Login = () => {
         },
         validationSchema: Yup.object({
             userName: Yup.string()
-              .required('Please enter your user name')
+              .required('Please enter your user name!')
               .trim(),
             password: Yup.string()
-              .required('Please enter your password')
+              .required('Please enter your password!')
               .trim()
         })
     });
 
     return ( 
         <StyledSection>
-            <h3>Login</h3>
+            <h1>Login</h1>
             <form onSubmit={formik.handleSubmit}>
                 <div>
                     <input
@@ -106,7 +126,9 @@ const Login = () => {
                         <p>{formik.errors.password}</p>
                     }
                 </div>
-                <input className="submit" type="submit" value="Log in" />
+                <div className="container">
+                <input className="login" type="submit" value="Log in" />
+                </div>
             </form>
             {
                 loginFailed && <p>Failed to log in. Please try again</p>
