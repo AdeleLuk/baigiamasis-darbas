@@ -4,7 +4,6 @@ import { useContext } from "react";
 import QuestionsContext from "../../contexts/QuestionsContext";
 import Question from "../UI/Question";
 import UsersContext from "../../contexts/UsersContext";
-import { emojiCursor } from "cursor-effects";
 
 const StyledSection = styled.section`
 
@@ -42,7 +41,6 @@ const StyledSection = styled.section`
 `;
 
 const Forum = () => {
-  new emojiCursor({ emoji: ["🔥", "🐬", "🦆"] });
   const { questions } = useContext(QuestionsContext);
   const { loggedInUser } = useContext(UsersContext);
 

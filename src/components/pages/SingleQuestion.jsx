@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import QuestionsContext from "../../contexts/QuestionsContext";
 import UsersContext from "../../contexts/UsersContext";
 import { ActionTypes } from "../../contexts/QuestionsContext";
@@ -58,7 +58,9 @@ const StyledDiv = styled.div`
     gap: 20px;
     width: 100%;
     border-radius: 0px;
-    height: 500px;
+  }
+  .reply{
+
   }
 `;
 
@@ -66,45 +68,89 @@ const SingleQuestion = () => {
   const { setQuestions, questions } = useContext(QuestionsContext);
   const { loggedInUser } = useContext(UsersContext);
   const { id } = useParams();
-  // const [card, setCard] = useState([]);
   const navigate = useNavigate();
   const card = questions.find((question) => question.id === id);
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:8085/questions/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setCard(data));
-  // }, [id]);
+  const formik = useFormik({
+    initialValues: {
+      text: '',
+    },
+    validationSchema: Yup.object({
+      text: Yup.string()
+        .required("This field is required")
+        .min(10, "At least 10 symbols")
+        .max(1000, "Comment is too long")
+        .trim()
+    }),
+    onSubmit: (values) => {
+      const newComment = {
+        text: values.text,
+        id: uuid(),
+        authorId: loggedInUser.id,
+      };
+      console.log(newComment);
+      setQuestions({
+        type: ActionTypes.addComment,
+        comment: newComment,
+        cardId: card.id
+      });
+      formik.resetForm();
+    }
+  });
+
 
   return (
-    <StyledDiv>
-      <div>
-        <h1>{card.questionTitle}</h1>
-        <p className="body">{card.questionBody}</p>
-        <p>{card.timestamp}</p>
-        {loggedInUser.id === card.userId && (
-          <div className="delete">
-            <button
-              onClick={() => {
-                setQuestions({
-                  type: ActionTypes.delete,
-                  id: card.id,
-                });
-                navigate("/forum/questions");
-              }}
-            >
-              <i class="bi bi-trash"></i>
-            </button>
+    <StyledDiv className="comments">
+      {
+        questions.length &&
+        <>
+         <div>
+            <h1>{card.questionTitle}</h1>
+            <p className="body">{card.questionBody}</p>
+            <p>{card.timestamp}</p>
+              {loggedInUser.id === card.userId && (
+                <div className="delete">
+                   <button
+                     onClick={() => {
+                      setQuestions({
+                      type: ActionTypes.delete,
+                      id: card.id,
+                     });
+                      navigate("/forum/questions");
+                     }}
+                    >
+                    <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+              )}
           </div>
-        )}
-      </div>
-      <div className="forComment">
-      <h1>Replies</h1>
-        {card.comments?.map((comment) => (
-          <CommentSection key={comment.id} comment={comment} cardId={card.id} />
-        ))}
-      </div>
-      {loggedInUser && <form></form>}
+          <div className="forComment">
+             <h1>Replies</h1>
+               {card.comments?.map((comment) => (
+               <CommentSection key={comment.id} comment={comment} cardId={card.id} />
+            ))}
+          </div>
+          {
+            loggedInUser &&
+            <form onSubmit={formik.handleSubmit}>
+            <div>
+              <textarea
+                name="text"
+                id="text"
+                placeholder="Reply..."
+                value={formik.values.text}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+              />
+                 {formik.touched.text && formik.errors.text && 
+                 <p>{formik.errors.text}</p>
+                 }
+             </div>
+             <input className="reply"type="submit" value="Reply" />
+          </form>
+          }
+        </>
+      }
     </StyledDiv>
   );
 };

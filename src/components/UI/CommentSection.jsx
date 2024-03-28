@@ -43,7 +43,10 @@ const CommentSection = ({ comment, cardId }) => {
   const { setQuestions } = useContext(QuestionsContext);
 
   return (
-    <StyledDiv>
+    <>
+    {
+      users.length &&
+      <StyledDiv>
       <p className="comment">{comment.text}</p>
       <p className="author">From {author.userName}</p>
       {loggedInUser.id === comment.authorId && (
@@ -62,6 +65,8 @@ const CommentSection = ({ comment, cardId }) => {
         </div>
       )}
     </StyledDiv>
+    }
+    </>
   );
 };
 

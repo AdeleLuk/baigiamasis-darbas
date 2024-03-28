@@ -7,6 +7,7 @@ export const ActionTypes = {
   newQuestion: "add to new question",
   delete: "delete question card",
   deleteComment: "delete comment",
+  addComment: 'add new comment'
 };
 
 const reducer = (state, action) => {
@@ -29,9 +30,29 @@ const reducer = (state, action) => {
         method: "DELETE",
       });
       return state.filter((question) => question.id !== action.id);
+    case ActionTypes.addComment:
+      const cardToAddComment = state.find((el) => el.id === action.cardId);
+      const commentedCard = {
+        ...cardToAddComment,
+        comments: cardToAddComment.comments ? [...cardToAddComment.comments, action.comment] : [action.comment]
+      };
+      fetch(`http://localhost:8085/questions/${action.cardId}`,{
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(commentedCard),
+      });
+      return state.map(el => {
+        if (el.id === action.cardId) {
+          return commentedCard;
+        } else {
+          return el;
+        }
+      });
 
     case ActionTypes.deleteComment:
-      const cardToChange = state.find((el) => el.id === action.cardId);
+      const cardToChange = state.find(el => el.id === action.cardId);
       console.log(cardToChange);
       const changedCard = {
         ...cardToChange,
@@ -54,7 +75,6 @@ const reducer = (state, action) => {
           return el;
         }
       });
-
     default:
       return state;
   }

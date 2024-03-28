@@ -86,10 +86,10 @@ const Footer = () => {
             </div>
             <hr />
             <div>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-tiktok"></i></a>
+                  <Link><i class="bi bi-facebook"></i></Link>
+                  <Link><i class="bi bi-twitter"></i></Link>
+                  <Link><i class="bi bi-instagram"></i></Link>
+                  <Link><i class="bi bi-tiktok"></i></Link>
                   <p><i class="bi bi-c-circle"></i>2024 Copyrights owned by UAB VEBSAITUKURIMAS</p>
               </div>
         </StyledFooter>
