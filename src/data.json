@@ -1,28 +1,78 @@
 {
-    "users": [
-      {
-        "id": "0",
-        "userName": "Vartotojas1",
-        "password": "123"
-      },
-      {
-        "id": "1",
-        "userName": "Vartotojas2",
-        "password": "abc"
-      }
-    ],
-    "questions": [
-      {
-        "id": "0",
-        "userId": "0",
-        "questionTitle": "How to make pasta?",
-        "questionBody": "I am really into Italian food, how do I make good pasta?"
-      },
-      {
-        "id": "1",
-        "userId": "1",
-        "questionTitle": "What is crypto",
-        "questionBody": "Can anyone explain how does crypto currency work and what is blockchain?"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "0",
+      "userName": "Vartotojas1",
+      "password": "123"
+    },
+    {
+      "id": "1",
+      "userName": "Vartotojas2",
+      "password": "abc"
+    },
+    {
+      "id": "84897695-aa19-464a-a4ca-4bc449509146",
+      "userName": "WartotojazZz",
+      "password": "WartotojazZz123*"
+    }
+  ],
+  "questions": [
+    {
+      "id": "0",
+      "userId": "0",
+      "questionTitle": "Does anyone know how to make pasta?",
+      "questionBody": "I am really into Italian food, how do I make good pasta?",
+      "timestamp": "2024-01-15",
+      "comments": [
+        {
+          "text": "Just google it",
+          "id": "bfcd7169-a1ee-4714-8ff3-f99d1a7edd04",
+          "authorId": "0"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "userId": "1",
+      "questionTitle": "What is crypto???Pls explain",
+      "questionBody": "Can anyone explain how does crypto currency work and what is blockchain?",
+      "timestamp": "2023-03-27",
+      "comments": [
+        {
+          "id": "0",
+          "authorId": "0",
+          "text": "it's a scam"
+        },
+        {
+          "text": "Definitely not a scam #cryptoforlife",
+          "id": "8a33cc7b-d6f7-4fa8-9803-d90389648d85",
+          "authorId": "1"
+        },
+        {
+          "text": "Are you a bot lol?",
+          "id": "bb3588f1-c57c-4200-9174-c94a757cb385",
+          "authorId": "0"
+        },
+        {
+          "text": "Anyway can I delete this comment?",
+          "id": "4fa25a1e-2b5e-41e1-96a4-53a3fc637391",
+          "authorId": "0"
+        }
+      ]
+    },
+    {
+      "id": "ac788801-9504-483b-8821-ad489027ee37",
+      "userId": "84897695-aa19-464a-a4ca-4bc449509146",
+      "questionTitle": "Will AI take over the world?!!!?!111?",
+      "questionBody": "Omg you guys I'm really scared AI will get too smart and take over the word, what do you think?",
+      "timestamp": "2024-03-28",
+      "comments": [
+        {
+          "text": "Please reply",
+          "id": "50c8ae15-f4ab-4a99-b8d0-9e0b0ee5abeb",
+          "authorId": "84897695-aa19-464a-a4ca-4bc449509146"
+        }
+      ]
+    }
+  ]
+}
